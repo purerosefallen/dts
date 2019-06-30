@@ -2,7 +2,7 @@ FROM php:7.1.30-apache-stretch
 
 RUN apt update && \
 	env DEBIAN_FRONTEND=noninteractive apt -y install wget libcurl4-openssl-dev && \
-	docker-php-ext-install sockets curl
+	docker-php-ext-install sockets curl pdo_mysql
 
 COPY . /defaults
 #RUN chmod -R 777 gamedata && \
