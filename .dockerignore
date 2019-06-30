@@ -1,0 +1,5 @@
+.git*
+Dockerfile
+.dockerignore
+/acdts-daemonctl.bat
+/readme.md
