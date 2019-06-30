@@ -1,9 +1,9 @@
 #!/bin/bash
 if [[ ! -f "./game.php" ]]; then # first run
 	cp -rf /defaults/* .;
-	chmod -R 777 ./gamedata;
-	chmod -R 777 ./include;
-	chmod -R 777 ./templates;
+	chown -R www-data:www-data ./gamedata;
+	chown -R www-data:www-data ./include;
+	chown -R www-data:www-data ./templates;
 fi
 ./acdts-daemonctl.sh &
 apache2-foreground
